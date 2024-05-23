@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/A_thumbnail.png" type="image/x-icon">
+    <title>Arkadeep's Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+        body {
+            font-family: "Josefin Sans", sans-serif !important;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(197, 0, 197, 0.5);
+            margin: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(197, 0, 197, 0.5);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card-image:hover img {
+            filter: sepia();
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-title a {
+            color: #e0e0e0;
+        }
+
+        .card-title a:hover {
+            color: rgb(197, 0, 197);
+        }
+
+        .card-text {
+            color: #b0b0b0;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+                <a href="https://arkadeep.com"><img src="assets/images/main_website.png" alt="arkadeep.com"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a href="https://arkadeep.com">Arkadeep.com</a></h2>
+                <p class="card-text">This is my main website. Whenever you are lost, visit this and it would link to all
+                    my socials, projects and everything.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="https://blog.arkadeep.com/"><img src="assets/images/blog.png" alt="arkadeep's blog"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a href="https://blog.arkadeep.com/">Arkadeep's Blog</a></h2>
+                <p class="card-text">My blog where I publish thoughtful content from the South Pole along with other
+                    creators like ArkGPT, ArkBOT, Arkive and 4rk4d33p!</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="https://github.com/drarkadeep/pyogenic-python-projects"><img src="assets/images/python.png"
+                        alt="python projects"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a href="https://github.com/drarkadeep/pyogenic-python-projects">Pyogenic Python
+                        Projects</a></h2>
+                <p class="card-text">The Python projects I work on, I have worked on, and I will work on (I'm not sure
+                    how this last type ended up here, given that, you know, I am yet to work on those).</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a
+                    href="https://docs.google.com/presentation/d/e/2PACX-1vSd3LvR-op43sjS_0Jl1LXpHT428XD1MRb9iUjyrus_oFlhvmgpHVveh_srfdtFm5BRKhX3ATOSMN3k/pub?start=true&loop=false&delayms=3000"><img
+                        src="assets/images/ppt.png" alt="Card Image"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a
+                        href="https://docs.google.com/presentation/d/e/2PACX-1vSd3LvR-op43sjS_0Jl1LXpHT428XD1MRb9iUjyrus_oFlhvmgpHVveh_srfdtFm5BRKhX3ATOSMN3k/pub?start=true&loop=false&delayms=3000">PeePeeTea™️</a>
+                </h2>
+                <p class="card-text">PeePeeTea helps you share only what's important in a noisy world so that everything
+                    you say bears more weight.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="https://blog.arkadeep.com/projects/"><img src="assets/images/books.png" alt="Card Image"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a href="https://blog.arkadeep.com/projects/">Books</a></h2>
+                <p class="card-text">Bibliography of Arkadeep, 4rk4d33p and the whole family...</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="https://blog.arkadeep.com/deep-comics/"><img src="assets/images/comic.jpg"
+                        alt="Card Image"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a href="https://blog.arkadeep.com/deep-comics/">DeepComics</a></h2>
+                <p class="card-text">The Deep Comics were published by 3am.page few years back. They are inspired by xkcd and Tintin.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="https://blog.arkadeep.com/a-boxful-of-design/"><img src="assets/images/designs.png"
+                        alt="Card Image"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a href="https://blog.arkadeep.com/a-boxful-of-design/">Design Boxes</a></h2>
+                <p class="card-text">Curated content from across the globe linked via cool design boxes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="https://blog.arkadeep.com/lively-characters/"><img src="assets/images/character.png"
+                        alt="Card Image"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a href="https://blog.arkadeep.com/lively-characters/">Card Title</a></h2>
+                <p class="card-text">You know them all. I know them all. As to whether they know each other, is the real question :) I had drawn them with the Concepts app on iPad, I think. </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <a href="https://drarkadeep.github.com"><img src="https://via.placeholder.com/300x200"
+                        alt="Card Image"></a>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title"><a href="https://drarkadeep.github.com">Card Title</a></h2>
+                <p class="card-text">I'm kinda lazy. So, I keep this here to copy-paste when I add new content. Lol.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
