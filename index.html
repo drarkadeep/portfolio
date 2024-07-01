@@ -84,208 +84,77 @@
             line-height: 1.6;
             font-size: 18px;
         }
+
+        .show-more-button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            margin-bottom: 50px;
+            padding: 10px 20px;
+            background-color: rgb(197, 0, 197);
+            color: #e0e0e0;
+            border: none;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .show-more-button:hover {
+            background-color: rgb(147, 0, 147);
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="card-image">
-                <a href="https://arkadeep.com"><img src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/main_website.png" alt="arkadeep.com"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://arkadeep.com">Arkadeep.com</a></h2>
-                <p class="card-text">This is my main website. Whenever you are lost, visit this and it would link to all
-                    my socials, projects and everything.</p>
-            </div>
-        </div>
+    <div id="card-container" class="container"></div>
 
-        <div class="card">
-            <div class="card-image">
-                <a href="https://blog.arkadeep.com/"><img src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/blog.png" alt="arkadeep's blog"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://blog.arkadeep.com/">Arkadeep's Blog</a></h2>
-                <p class="card-text">My blog where I publish thoughtful content from the South Pole along with other
-                    creators like ArkGPT, ArkBOT, Arkive and 4rk4d33p!</p>
-            </div>
-        </div>
+    <button id="show-more-button" class="show-more-button">Show More</button>
 
-        <div class="card">
-            <div class="card-image">
-                <a href="https://www.youtube.com/playlist?list=PLmJt-medO57cf_pgJQkbHL8k0OP4rYiYp"><img src="https://i.ytimg.com/vi/eEutrJzhSl8/hqdefault.jpg"
-                        alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://www.youtube.com/watch?v=Z4zhruL2U2k&list=PLmJt-medO57cf_pgJQkbHL8k0OP4rYiYp&index=1">Math Shorts</a></h2>
-                <p class="card-text">A bunch of short and funny math videos made with desmos.</p>
-            </div>
-        </div>
+    <script>
 
-        <div class="card">
-            <div class="card-image">
-                <a href="https://github.com/drarkadeep/pyogenic-python-projects"><img src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/python.png"
-                        alt="python projects"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://github.com/drarkadeep/pyogenic-python-projects">Pyogenic Python
-                        Projects</a></h2>
-                <p class="card-text">The Python projects I work on, I have worked on, and I will work on (I'm not sure
-                    how this last type ended up here, given that, you know, I am yet to work on those).</p>
-            </div>
-        </div>
-        
-        
-        <div class="card">
-            <div class="card-image">
-                <a href="https://www.youtube.com/watch?v=cFChKIbB_FQ&list=PLmJt-medO57cmpFMwO6WPYtrBUK2GPbFg&index=2"><img src="https://i.ytimg.com/vi/cFChKIbB_FQ/hqdefault.jpg" alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://www.youtube.com/watch?v=cFChKIbB_FQ&list=PLmJt-medO57cmpFMwO6WPYtrBUK2GPbFg&index=2">Flags of the World</a></h2>
-                <p class="card-text">Creating and animating the flags of nations with some simple trigonometric equations.</p>
-            </div>
-        </div>
+        function createCard(cardInfo) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="card-image">
+                    <a href="${cardInfo.linkUrl}"><img src="${cardInfo.imageUrl}" alt="${cardInfo.title}"></a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title"><a href="${cardInfo.linkUrl}">${cardInfo.title}</a></h2>
+                    <p class="card-text">${cardInfo.text}</p>
+                </div>
+            `;
+            return card;
+        }
 
-        <div class="card">
-            <div class="card-image">
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vSd3LvR-op43sjS_0Jl1LXpHT428XD1MRb9iUjyrus_oFlhvmgpHVveh_srfdtFm5BRKhX3ATOSMN3k/pub?start=true&loop=false&delayms=3000"><img
-                        src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/ppt.png" alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a
-                        href="https://docs.google.com/presentation/d/e/2PACX-1vSd3LvR-op43sjS_0Jl1LXpHT428XD1MRb9iUjyrus_oFlhvmgpHVveh_srfdtFm5BRKhX3ATOSMN3k/pub?start=true&loop=false&delayms=3000">PeePeeTea™️</a>
-                </h2>
-                <p class="card-text">PeePeeTea helps you share only what's important in a noisy world so that everything
-                    you say bears more weight.</p>
-            </div>
-        </div>
-        
-        
-        <div class="card">
-            <div class="card-image">
-                <a href="https://www.youtube.com/watch?v=Fs9kc1lA47Q&list=PLmJt-medO57f2JsJ86phjYkktXhD-TOVF"><img src="https://i.ytimg.com/vi/aqSTA3uA9ZA/hqdefault.jpg" alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://www.youtube.com/watch?v=Fs9kc1lA47Q&list=PLmJt-medO57f2JsJ86phjYkktXhD-TOVF">AI takes over :(</a></h2>
-                <p class="card-text">This description was generated by AI.</p>
-            </div>
-        </div>
+        function renderCards(cardData, container, isImportant) {
+            cardData.forEach(cardInfo => {
+                if (cardInfo.important === isImportant) {
+                    const card = createCard(cardInfo);
+                    container.appendChild(card);
+                }
+            });
+        }
 
-        <div class="card">
-            <div class="card-image">
-                <a href="https://blog.arkadeep.com/projects/"><img src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/books.png" alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://blog.arkadeep.com/books/">Books</a></h2>
-                <p class="card-text">Bibliography of Arkadeep, 4rk4d33p and the whole family...</p>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-image">
-                <a href="https://www.youtube.com/watch?v=cvLTAzy_gZ4&list=PLmJt-medO57cu3Hw-bO18HrB81tspTuAF&index=1"><img src="https://i.ytimg.com/vi/LIcEIy3S6EQ/hqdefault.jpg" alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://www.youtube.com/watch?v=cvLTAzy_gZ4&list=PLmJt-medO57cu3Hw-bO18HrB81tspTuAF&index=1">Animated Shorts</a></h2>
-                <p class="card-text">Extremely short animations drawn on iPad and by Python but not both.</p>
-            </div>
-        </div>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('card-container');
+                const showMoreButton = document.getElementById('show-more-button');
 
-        <div class="card">
-            <div class="card-image">
-                <a href="https://blog.arkadeep.com/deep-comics/"><img src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/comic.jpg"
-                        alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://blog.arkadeep.com/deep-comics/">DeepComics</a></h2>
-                <p class="card-text">The Deep Comics were published by 3am.page few years back. They are inspired by xkcd and Tintin.</p>
-            </div>
-        </div>
+                renderCards(data, container, 1);
 
-        <div class="card">
-            <div class="card-image">
-                <a href="https://blog.arkadeep.com/a-boxful-of-design/"><img src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/designs.png"
-                        alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://blog.arkadeep.com/a-boxful-of-design/">Design Boxes</a></h2>
-                <p class="card-text">Curated content from across the globe linked via cool design boxes.</p>
-            </div>
-        </div>        
-        
-        <div class="card">
-            <div class="card-image">
-                <a href="https://www.youtube.com/watch?v=pc6fBCJ0cjU&list=PLmJt-medO57elx-R90i8d_a_IHFrqmf8N&index=4"><img src="https://i.ytimg.com/vi/B0I5DC--1vw/hqdefault.jpg" alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://www.youtube.com/watch?v=pc6fBCJ0cjU&list=PLmJt-medO57elx-R90i8d_a_IHFrqmf8N&index=4">Textual Gratification</a></h2>
-                <p class="card-text">Grabbing attention by converting text into videos.</p>
-            </div>
-        </div>           
-        
-        <div class="card">
-            <div class="card-image">
-                <a href="https://www.youtube.com/watch?v=V-Ipana6u_o&list=PLmJt-medO57dkJ7pi0gd1au_mIITQXUyn&index=1"><img src="https://i.ytimg.com/vi/SR8Vx1pdGlg/hqdefault.jpg" alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://www.youtube.com/watch?v=V-Ipana6u_o&list=PLmJt-medO57dkJ7pi0gd1au_mIITQXUyn&index=1">Gameplay Gore</a></h2>
-                <p class="card-text">There's a reason I don't call myself a gamer. This is that.</p>
-            </div>
-        </div>        
-        
-        <div class="card">
-            <div class="card-image">
-                <a href="https://www.youtube.com/watch?v=Q1UwFho-Oa8&list=PLmJt-medO57fU3m17ECuP_AxJmvqp1Hu0&index=2"><img src="https://i.ytimg.com/vi/Q1UwFho-Oa8/hqdefault.jpg" alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://www.youtube.com/watch?v=Q1UwFho-Oa8&list=PLmJt-medO57fU3m17ECuP_AxJmvqp1Hu0&index=2">Mesmerizing Musical Melancholy</a></h2>
-                <p class="card-text">I am not good at making music. So I make bad music.</p>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-image">
-                <a href="https://www.youtube.com/watch?v=5HWxU_D1bVw&list=PLmJt-medO57c2XuqbaQGl0ABeYi_dFlXj&index=1"><img src="https://i.ytimg.com/vi/5HWxU_D1bVw/hqdefault.jpg" alt="Graphical Content"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://www.youtube.com/watch?v=5HWxU_D1bVw&list=PLmJt-medO57c2XuqbaQGl0ABeYi_dFlXj&index=1">Graphical Content</a></h2>
-                <p class="card-text">Whatever I create with Three.js gets added here.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <a href="https://blog.arkadeep.com/lively-characters/"><img src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/character.png"
-                        alt="Lively Characters"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://blog.arkadeep.com/lively-characters/">Lively Characters</a></h2>
-                <p class="card-text">You know them all. I know them all. As to whether they know each other, is the real question :) I had drawn them with the Concepts app on iPad, I think. </p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <a href="https://github.com/drarkadeep/purulent-personal-projects"><img src="https://raw.githubusercontent.com/drarkadeep/drarkadeep.github.io/main/assets/images/angry-peng.jpg"
-                        alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://github.com/drarkadeep/purulent-personal-projects">Purulent Personal Projects</a></h2>
-                <p class="card-text">These are "those" that I make for personal needs (mostly standalone webapps). Not too flashy but you can use them as bases and build solutions for yourself.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <a href="https://drarkadeep.github.io/purulent-personal-projects/portfolio-generator/index.html"><img src="https://repository-images.githubusercontent.com/519348881/d411fd39-0622-443e-8082-8783ccf386c8"
-                        alt="Card Image"></a>
-            </div>
-            <div class="card-content">
-                <h2 class="card-title"><a href="https://drarkadeep.github.io/purulent-personal-projects/portfolio-generator/index.html">Portfolio Generator</a></h2>
-                <p class="card-text">Lol, I made a portfolio card generator to generate these. Laziness is truly the mother of all inventions.</p>
-            </div>
-        </div>
-    </div>
+                showMoreButton.addEventListener('click', () => {
+                    renderCards(data, container, 0);
+                    showMoreButton.style.display = 'none';
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching card data:', error);
+            });
+    </script>
 </body>
 
 </html>
